@@ -12,6 +12,9 @@ nav{
     background-color: black;
     color: white;
 }
+.logo{
+    color: #3BDDF6;
+}
 
 .section{
     width: 100%;
@@ -27,11 +30,10 @@ nav{
     background-size: cover;
     background-position: center;}
 .section1{
-    background-image: url('https://www.interfacedigital.in/wp-content/uploads/2023/05/Wireless-Home-Automation-Features-and-Benefits.jpg');
-
+    background-image: url('https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExM2NjcXV6c2c4eTBueTJmOGNydWp6NHdrNHc5dmZuYmFlcmN1amhmMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/69keEWTyGUMU67tppZ/giphy.gif');
 }
 .section3{
-    background-image: url('https://newcomme.com/wp-content/uploads/2023/12/blog.png');
+    background-image: url('https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWtldGtwbTAya2ZjNWZqbHg3MTNqeDI5NTUzMWxuMDdveGM1ZXB3biZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/iX0aEASQCFxImhSsaX/giphy.gif');
 }
 
 .nav-link:hover{
