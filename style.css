@@ -1,0 +1,48 @@
+/* #3BDDF6 ciano */
+html {
+    font-size: 16px;
+  }
+  
+body{
+    background-color: black;
+    font-size: 1rem; /* 16px */
+    line-height: 1.6;
+    font-family: 'roboto', sans-serif;}
+nav{
+    background-color: black;
+    color: white;
+}
+
+.section{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+}
+.section1, .section3{
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;}
+.section1{
+    background-image: url('https://www.interfacedigital.in/wp-content/uploads/2023/05/Wireless-Home-Automation-Features-and-Benefits.jpg');
+
+}
+.section3{
+    background-image: url('https://newcomme.com/wp-content/uploads/2023/12/blog.png');
+}
+
+.nav-link:hover{
+    color: #3BDDF6 !important;
+    transition: 0.5s;
+}
+
+.orcamentoBtn{
+    background-color: #3BDDF6;
+    border-radius: 8px;
+    padding: 8px;
+    margin-right: 10px;
+    color: black;
+}
