@@ -5,17 +5,51 @@ html {
   
 body{
     background-color: black;
-    font-size: 1rem; /* 16px */
+    font-size: 1rem; 
     line-height: 1.6;
-    font-family: 'roboto', sans-serif;}
+    font-family: 'roboto', sans-serif;
+    overflow-x: hidden;
+}
+    
 nav{
     background-color: black;
     color: white;
 }
+
 .logo{
     color: #3BDDF6;
 }
+span{
+    font-weight: 1000;
+    font-size: larger;
+}
+.section1 div{
+    max-width: 50%;
+}
 
+.section2{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+    font-size: 16pt;
+    padding: 20px;
+    gap: 15px;
+
+}
+.section2 div{
+    max-width: 50%;
+}
+.elements img{
+    box-shadow: 10px 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 100%;
+    max-width: 90%;
+
+}
+.rotate{
+    transform: rotate(360deg);
+    transition: transform 5s;
+}
 .section{
     width: 100%;
     min-height: 100vh;
@@ -30,15 +64,35 @@ nav{
     background-size: cover;
     background-position: center;}
 .section1{
-    background-image: url('https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExM2NjcXV6c2c4eTBueTJmOGNydWp6NHdrNHc5dmZuYmFlcmN1amhmMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/69keEWTyGUMU67tppZ/giphy.gif');
+    background-color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    top: 30px;
+    padding: 20px;
 }
 .section3{
-    background-image: url('https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWtldGtwbTAya2ZjNWZqbHg3MTNqeDI5NTUzMWxuMDdveGM1ZXB3biZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/iX0aEASQCFxImhSsaX/giphy.gif');
-}
+    background-image: url('https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmxuNzhpMjBuM2R0ZTJnMXdyMncxYWM4cWFqNTFybDhpaHFleHcwcyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/dNvcuNL9NVSa5o9LE4/giphy.gif');
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    padding: 30px;
 
+}
+.section3 div{
+    gap: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.card:hover{
+    transform: scale(1.1);
+    transition: 0.2s;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.5);
+}
 .nav-link:hover{
     color: #3BDDF6 !important;
-    transition: 0.5s;
+    transition: 0.3s;
 }
 
 .orcamentoBtn{
@@ -47,4 +101,12 @@ nav{
     padding: 8px;
     margin-right: 10px;
     color: black;
+    border: none;
+}
+h2{
+    color: #3BDDF6;
+
+}
+.hidden{
+    display: none;
 }
