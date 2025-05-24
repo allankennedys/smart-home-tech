@@ -41,7 +41,7 @@
                     <a class="nav-link text-white" href="#">Dúvidas Frequentes</a>
                   </li>
                 </ul>
-                <button class="navbar-text orcamentoBtn hidden">Solicitar Orçamento</button>
+                <button class="navbar-text orcamentoBtn hidden" onclick="openModal()">Solicitar Orçamento</button>
               </div>
             </div>
           </nav>
@@ -49,7 +49,7 @@
     <div class="section1 section">
       <div class="h1 headline">  
         <h1><span>Smart Home Tech</span><br>Soluções Inteligentes para casas conectadas.</h1>
-      <button class="btn btn-dark btn-lg" type="button">Solicitar Orçamento</button>
+      <button class="btn btn-dark btn-lg" type="button" onclick="openModal()">Solicitar Orçamento</button>
       </div>
       <div class="elements headline">
         <img src="assets/file-modified.png" alt="" class="img-fluid">
@@ -107,6 +107,11 @@
     <footer>
     <p class="text-center">© 2025 Smart Home Tech</p>
     </footer>
+    <div id="modal">
+      <div id="modalForm"></div>
+    <button type="button" onclick="closeModal()">Fechar</button>
+    </div>
+    <script src="main.js"></script>
     <script src="style.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
 </body>
