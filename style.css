@@ -7,7 +7,7 @@ body{
     background-color: black;
     font-size: 1rem; 
     line-height: 1.6;
-    font-family: 'roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
 }
     
@@ -212,6 +212,11 @@ border: none;
     gap: 20px;
     margin-bottom: 30px;
 }
+.aside-text{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
 @media (max-width: 768px) {
     .section1{
         flex-direction: column-reverse;
@@ -244,4 +249,11 @@ border: none;
         font-size: 1.5rem;
        
     }
+    
+}
+footer{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    text-align: center;
 }
