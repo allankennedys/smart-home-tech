@@ -256,4 +256,25 @@ footer{
     color: white;
     padding: 10px;
     text-align: center;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.footer-icons{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  
+}
+.footer-icons img{
+   max-width: 40px;
+   
+}
+.footer-icons img:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+    box-shadow: #3BDDF6 0 0 2px;
+    border-radius: 100%;
 }
