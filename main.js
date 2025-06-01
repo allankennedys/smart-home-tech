@@ -1,3 +1,5 @@
+
+
 function closeModal() {
   const modal = document.getElementById('modal');
   modal.remove();
@@ -21,13 +23,39 @@ function openModal() {
           <button type="submit" class="btn btn-dark">Solicitar</button>
           <button type="button" onclick="closeModal()">Fechar</button>
         </div>
+        <p id="statusMsg"></p>
       </form>
     </div>
   `;
 
   page.appendChild(modal);
 
-  const form = document.querySelector('#modalForm form');
+        //LOcal Storage:
+
+
+const campos = modal.querySelectorAll('input, textarea');
+
+campos.forEach((campo) => {
+
+  const dadoSalvo = localStorage.getItem(campo.name);
+  if (dadoSalvo){
+    campo.value = dadoSalvo;
+  }
+
+
+
+  campo.addEventListener('input', (event) => {
+    localStorage.setItem(event.target.name, event.target.value);
+   
+  }
+  );});
+
+
+
+      // Impedir que seja abera uma nova aba ao enviar o formulário:
+
+  const form = modal.querySelector('form');
+  const statusMsg = modal.querySelector('#statusMsg');
 
   form.addEventListener('submit', function(event) {
     event.preventDefault();
@@ -51,21 +79,24 @@ function openModal() {
           <button type="button" onclick="closeModal()">Fechar</button>
          </div>
         `;
+        localStorage.setItem('formSubmitted', 'true');
+        campos.forEach((campo)=>{
+          localStorage.removeItem(campo.name);
+        campo.value = '';
+        })
       } else {
-        modal.innerHTML = `
-         <div id="modalForm">
-         <h3>Erro ao Solicitar Orçamento :(</h3>
-          <p>Tivemos um problema ao solicitar seu orçamento. Por favor, tente novamente mais tarde.</p>
-          <button type="button" onclick="closeModal()">Fechar</button>
-         </div> `;
+        statusMsg.innerHTML = "Tivemos um problema ao solicitar seu orçamento. Por favor, tente novamente mais tarde.";
       }
     })
     .catch(error => {
       console.error('Erro:', error);
-      modal.innerHTML = `
-         <div id="modalForm">
-         <h3>Erro ao Solicitar Orçamento :(</h3>
-          <p>Tivemos um problema ao solicitar seu orçamento. Por favor, tente novamente mais tarde.</p>
-          <button type="button" onclick="closeModal()">Fechar</button>
-         </div> `;
-    })})};
+      statusMsg.innerHTML = "Tivemos um problema ao solicitar seu orçamento. Por favor, tente novamente mais tarde.";
+    })})
+    
+   
+  };
+
+
+
+
+
