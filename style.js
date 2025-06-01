@@ -8,14 +8,14 @@ window.addEventListener('scroll', function() {
     const scrollPosition = window.scrollY;
 
     if(scrollPosition>100){
-        img.classList.add('rotate');
+        img?.classList.add('rotate');
     }
     else{
-            img.classList.remove('rotate');
+            img?.classList.remove('rotate');
         
     }
 
-    if(scrollPosition>500){
+    if(scrollPosition>200){
         btn.classList.remove('hidden');
     }
     else{
