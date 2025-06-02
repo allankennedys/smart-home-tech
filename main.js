@@ -85,12 +85,12 @@ campos.forEach((campo) => {
         campo.value = '';
         })
       } else {
-        statusMsg.innerHTML = "Tivemos um problema ao solicitar seu orçamento. Por favor, tente novamente mais tarde.";
+        statusMsg.innerHTML = "Tivemos um problema ao solicitar seu orçamento.<br>Por favor, tente novamente mais tarde.";
       }
     })
     .catch(error => {
       console.error('Erro:', error);
-      statusMsg.innerHTML = "Tivemos um problema ao solicitar seu orçamento. Por favor, tente novamente mais tarde.";
+      statusMsg.innerHTML = "Tivemos um problema ao solicitar seu orçamento.<br>Por favor, tente novamente mais tarde.";
     })})
     
    
