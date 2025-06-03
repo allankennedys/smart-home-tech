@@ -15,12 +15,12 @@ function openModal() {
       <p>Preencha o formulário abaixo e entraremos em contato o mais breve possível.</p>
       <form action="https://formsubmit.co/lkevynpa@gmail.com" method="POST">
       <label for="name">Nome:</label>
-        <input type="text" name="name"required style="width:100%; margin-bottom:10px;"><br>
+        <input type="text" name="name"required style="width:100%; margin-bottom:10px;">
         <label for="email">Email:</label>
-        <input type="email" name="email" required style="width:100%; margin-bottom:10px;"><br>
+        <input type="email" name="email" required style="width:100%; margin-bottom:10px;">
         <label for="phone">Telefone:</label>
-        <input type="tel" name="phone" required style="width:100%; margin-bottom:10px;"><br>
-        <textarea name="message" placeholder="Digite sua mensagem (Opcional)" style="width:100%; margin-bottom:10px;"></textarea><br>
+        <input type="tel" name="phone" required style="width:100%; margin-bottom:10px;">
+        <textarea name="message" placeholder="Digite sua mensagem (Opcional)" style="width:100%; margin-bottom:10px;"></textarea>
         <input type="hidden" name="_captcha" value="false">
         <div id="submitArea" style="display:flex; justify-content:space-between;">
           <button type="submit" class="btn btn-dark">Solicitar</button>
