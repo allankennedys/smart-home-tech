@@ -1,6 +1,7 @@
 /* #3BDDF6 ciano */
 html {
     font-size: 16px;
+    scroll-behavior: smooth;
   }
   
 body{
@@ -96,6 +97,12 @@ span{
     flex-wrap: wrap;
     justify-content: center;
 }
+.about{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   gap: 50px;
+}
 .card:hover{
     transform: scale(1.02);
     transition: 0.2s;
@@ -166,7 +173,6 @@ form button{
 #modalForm form{
     display: flex;
     flex-direction: column;
-    gap: 10px;
 }
 input, textarea, #modalForm button{
     border-radius: 4px;
@@ -178,6 +184,9 @@ input:focus, textarea:focus{
 }
 textarea{
     resize: none;
+}
+label{
+    align-self: flex-start;
 }
 .faq{
     display: flex;
