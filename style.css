@@ -173,7 +173,8 @@ form button{
 #modalForm form{
     display: flex;
     flex-direction: column;
-    gap: 2px;
+    gap: 0;
+    
 }
 input, textarea, #modalForm button{
     border-radius: 4px;
