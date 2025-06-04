@@ -5,7 +5,8 @@ fetch('./produtos.json')
     data.forEach(produto => {
       const card = document.createElement('div');
       card.classList.add('card', 'headline', 'produto-card');
-      card.style.width = '16rem';
+      card.style.width = '17rem';
+      
 
       const img = document.createElement('img');
       img.classList.add('card-img-top', 'produto-img');
