@@ -24,6 +24,7 @@ span{
     font-weight: 1000;
     font-size: larger;
 }
+
 .section1 div{
     max-width: 50%;
 }
@@ -91,7 +92,7 @@ span{
     z-index: 0;
 
 }
-.section3 div{
+#produto-area{
     gap: 50px;
     display: flex;
     flex-wrap: wrap;

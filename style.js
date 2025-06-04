@@ -1,4 +1,10 @@
-ScrollReveal().reveal('.headline', { delay: 500,reset:true});
+ScrollReveal().reveal('.headline', {
+        delay: 200,
+        distance: '20px',
+        origin: 'bottom',
+        duration: 600,
+        reset: true
+      });
 
 const img = document.querySelector('.img-fluid');
 const btn = document.querySelector('.orcamentoBtn');
