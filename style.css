@@ -82,7 +82,7 @@ span{
 }
 .section3{
 
-    background-image:  linear-gradient(rgba(0, 0, 0, 0.514)),url('https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmxuNzhpMjBuM2R0ZTJnMXdyMncxYWM4cWFqNTFybDhpaHFleHcwcyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/dNvcuNL9NVSa5o9LE4/giphy.gif'),linear-gradient(rgba(0, 0, 0, 0.26)) , url('https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmxuNzhpMjBuM2R0ZTJnMXdyMncxYWM4cWFqNTFybDhpaHFleHcwcyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/dNvcuNL9NVSa5o9LE4/giphy.gif');
+    background-image:  linear-gradient(rgba(0, 0, 0, 0.692)),url('https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmxuNzhpMjBuM2R0ZTJnMXdyMncxYWM4cWFqNTFybDhpaHFleHcwcyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/dNvcuNL9NVSa5o9LE4/giphy.gif'),linear-gradient(rgba(0, 0, 0, 0.26)) , url('https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmxuNzhpMjBuM2R0ZTJnMXdyMncxYWM4cWFqNTFybDhpaHFleHcwcyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/dNvcuNL9NVSa5o9LE4/giphy.gif');
     display: flex;
     flex-direction: column;
     height: fit-content;
