@@ -47,7 +47,7 @@ fetch('./produtos.json')
         distance: '20px',
         origin: 'bottom',
         duration: 600,
-        reset: true
+        reset: false
       });
 
     });
