@@ -292,3 +292,13 @@ footer{
     box-shadow: #3BDDF6 0 0 2px;
     border-radius: 100%;
 }
+.container-produto{
+    color: white;
+}
+.container-produto img{
+    max-width: 50%;
+    max-height: 50%;
+    margin-top: 100px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
