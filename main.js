@@ -13,13 +13,23 @@ function openModal() {
     <div id="modalForm">
       <h3>Solicite um Orçamento</h3>
       <p>Preencha o formulário abaixo e entraremos em contato o mais breve possível.</p>
-      <form action="https://formsubmit.co/lkevynpa@gmail.com" method="POST">
+      <form action="https://formsubmit.co/ricardocfsouza1@gmail.com" method="POST">
       <label for="name">Nome:</label>
         <input type="text" name="name"required style="width:100%; margin-bottom:10px;">
-        <label for="email">Email:</label>
-        <input type="email" name="email" required style="width:100%; margin-bottom:10px;">
         <label for="phone">Telefone:</label>
         <input type="tel" name="phone" required style="width:100%; margin-bottom:10px;">
+        <label for="produto-servico">Escolha o produto/serviço</label>
+      <select id="produto-servico" name="produto-servico" style="width:100%; margin-bottom:10px; height: 35px">
+          <option value="Instalacao Completa">Instalação Completa de Sistema de Automação</option>
+          <option value="Assistentes Virtuais">Assistentes Virtuais</option>
+          <option value="Fechaduras Eletrônicas">Fechaduras Eletrônicas</option>
+          <option value="Cortina Automática">Cortina Automática</option>
+          <option value="Tomadas Inteligentes">Tomadas Inteligentes</option>
+          <option value="Sensores de Presença">Sensores de Presença</option>
+          <option value="Cameras de Seguranca">Câmeras de Segurança</option>
+          <option value="interruptor inteligente">Interruptores Inteligentes</option>
+          <option value="controle universal">Controles Universais</option>
+    </select>
         <textarea name="message" placeholder="Digite sua mensagem (Opcional)" style="width:100%; margin-bottom:10px;"></textarea>
         <input type="hidden" name="_captcha" value="false">
         <div id="submitArea" style="display:flex; justify-content:space-between;">
@@ -36,7 +46,7 @@ function openModal() {
         //LOcal Storage:
 
 
-const campos = modal.querySelectorAll('input, textarea');
+const campos = modal.querySelectorAll('input, textarea, select');
 
 campos.forEach((campo) => {
 
@@ -55,7 +65,6 @@ campos.forEach((campo) => {
 
 
 
-      // Impedir que seja abera uma nova aba ao enviar o formulário:
 
   const form = modal.querySelector('form');
   const statusMsg = modal.querySelector('#statusMsg');
@@ -65,7 +74,7 @@ campos.forEach((campo) => {
     const formData = new FormData(form);
     const data = Object.fromEntries(formData.entries());
 
-    fetch('https://formsubmit.co/lkevynpa@gmail.com', {
+    fetch('https://formsubmit.co/ricardocfsouza1@gmail.com', {
       method: 'POST',
       body: JSON.stringify(data),
       headers: {
