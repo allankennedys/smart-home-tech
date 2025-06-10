@@ -84,7 +84,7 @@ function mostrarProdutoIndividual(produtos, id) {
       <p>${produto.descrição}</p>
       <p>${produto.detalhes || ''}</p>
       <p>${produto.opções || ''}</p>
-  <button class="navbar-text orcamentoBtn" onclick="openModal()">Solicitar Orçamento</button>
+  <button class="navbar-text orcamentoBtn bg-dark text-white" onclick="openModal()">Solicitar Orçamento</button>
     </div>
   </div>
         <a href="index.html#produtos" class="btn btn-secondary" style="width: 150px; margin-top:50px;">← Voltar</a>
