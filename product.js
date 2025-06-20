@@ -1,6 +1,22 @@
-fetch('./produtos.json')
-  .then(response => response.json())
-  .then(produtos => {
+import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-firestore.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-app.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCp0-YjWKzvfMo2TPVEtoJG0RaIXo3qQcM",
+  authDomain: "smarthometech-7f245.firebaseapp.com",
+  projectId: "smarthometech-7f245",
+  storageBucket: "smarthometech-7f245.appspot.com",
+  messagingSenderId: "234754136199",
+  appId: "1:234754136199:web:1fedca3a9a1dea07334022",
+  measurementId: "G-VNLJ8SRFSG"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+async function carregarProdutos() {
+  const snapshot = await getDocs(collection(db, "produtos"));
+  const produtos = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
     const params = new URLSearchParams(window.location.search);
     const id = params.get('id');
 
@@ -9,7 +25,7 @@ fetch('./produtos.json')
     } else {
       listarTodosProdutos(produtos);
     }
-  });
+  };
 
 function listarTodosProdutos(produtos) {
   const container = document.getElementById('produto-area');
@@ -94,3 +110,4 @@ function mostrarProdutoIndividual(produtos, id) {
 
   document.title = produto.nome + ' | Smart Home Tech';
 }
+carregarProdutos();
