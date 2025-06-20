@@ -26,8 +26,8 @@ async function carregarProdutos() {
     } else {
 const path = window.location.pathname;
 
-    const isIndex =
-      path.endsWith("index.html")
+    const isIndex = window.location.pathname === '/' || window.location.pathname.endsWith('index.html');
+
 
     let produtosListados = produtos;
     if (isIndex) {
@@ -157,10 +157,9 @@ function carregandoIcon(){
 </div>`
 const area = document.getElementById('loading');
   area.style.display = 'block';
-const path = window.location.pathname;
+const isIndex = window.location.pathname === '/' || window.location.pathname.endsWith('index.html');
 
-    const isIndex =
-      path.endsWith("index.html")
+  
   if(isIndex){
   area.style.height = 'fit-content';
   }
