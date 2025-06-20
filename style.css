@@ -106,8 +106,8 @@ span{
 }
 .card:hover{
     transform: scale(1.02);
-    transition: 0.2s;
-    box-shadow: 0 0 100px rgba(0, 0, 0, 0.5);
+    transition: 1s;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.253);
 }
 .nav-link:hover{
     color: #3BDDF6 !important;

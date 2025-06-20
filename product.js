@@ -28,7 +28,6 @@ const path = window.location.pathname;
 
     const isIndex = window.location.pathname === '/' || window.location.pathname.endsWith('index.html');
 
-
     let produtosListados = produtos;
     if (isIndex) {
       produtosListados = produtos.slice(0, 4);
