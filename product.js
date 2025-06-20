@@ -164,6 +164,9 @@ const path = window.location.pathname;
   if(isIndex){
   area.style.height = 'fit-content';
   }
+  else{
+    area.style.height = '50vh';
+  }
 }
 function removeCarregandoIcon(){
   const area = document.getElementById('loading');
