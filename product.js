@@ -1,5 +1,6 @@
-import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-firestore.js";
+import { getFirestore, collection, getDocs, getDoc, doc } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-firestore.js";
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-app.js";
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyCp0-YjWKzvfMo2TPVEtoJG0RaIXo3qQcM",
@@ -15,20 +16,31 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 async function carregarProdutos() {
+    carregandoIcon();
   const snapshot = await getDocs(collection(db, "produtos"));
   const produtos = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
     const params = new URLSearchParams(window.location.search);
     const id = params.get('id');
-
     if (id) {
-      mostrarProdutoIndividual(produtos, id);
+      await carregarProdutoIndividual(id);
     } else {
-      listarTodosProdutos(produtos);
+const path = window.location.pathname;
+
+    const isIndex =
+      path.endsWith("index.html")
+
+    let produtosListados = produtos;
+    if (isIndex) {
+      produtosListados = produtos.slice(0, 4);
     }
+      await listarTodosProdutos(produtosListados);
+    }
+      removeCarregandoIcon()
   };
 
 function listarTodosProdutos(produtos) {
   const container = document.getElementById('produto-area');
+  container.innerHTML = '';
 
   produtos.forEach(produto => {
     const card = document.createElement('div');
@@ -80,16 +92,27 @@ function listarTodosProdutos(produtos) {
     });
   });
 }
+async function carregarProdutoIndividual(id) {
 
-function mostrarProdutoIndividual(produtos, id) {
-  const produto = produtos.find(p => p.id === id);
-  const container = document.getElementById('produto-area');
 
-  if (!produto) {
+  const docRef = doc(db, "produtos", id);
+  const docSnapshot = await getDoc(docRef);
+
+  if (docSnapshot.exists()) {
+    const produto = {id: docSnapshot.id, ...docSnapshot.data()};
+    mostrarProdutoIndividual(produto);
+  }
+
+
+  else{
+      const container = document.getElementById('produto-area');
     container.innerHTML = '<p>Produto não encontrado.</p>';
     return;
   }
+  }
 
+function mostrarProdutoIndividual(produto) {
+      const container = document.getElementById('produto-area');
   container.innerHTML = `
   <div class="row align-items-center" id="div-detalhe">
     <div class="col-md-6">
@@ -103,11 +126,49 @@ function mostrarProdutoIndividual(produtos, id) {
   <button class="navbar-text orcamentoBtn bg-dark text-white" onclick="openModal()">Solicitar Orçamento</button>
     </div>
   </div>
-        <a href="index.html#produtos" class="btn btn-secondary" style="width: 150px; margin-top:50px;">Voltar</a>
+        <button onclick="history.back()" class="btn btn-secondary" style="width: 150px; margin-top:50px;">Voltar</button>
+
 
 `;
 
 
   document.title = produto.nome + ' | Smart Home Tech';
 }
-carregarProdutos();
+
+function carregandoIcon(){
+  const container = document.getElementById('produto-area');
+  container.innerHTML = 
+  `<div id="loading" class="d-flex justify-content-center align-items-center flex-wrap" style="height: 100vh; gap: 20px;">
+  <div class="spinner-grow text-secondary" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+<div class="spinner-grow text-secondary" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+<div class="spinner-grow text-secondary" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+<div class="spinner-grow text-secondary" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+<div class="spinner-grow text-secondary" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+</div>`
+const area = document.getElementById('loading');
+  area.style.display = 'block';
+const path = window.location.pathname;
+
+    const isIndex =
+      path.endsWith("index.html")
+  if(isIndex){
+  area.style.height = 'fit-content';
+  }
+}
+function removeCarregandoIcon(){
+  const area = document.getElementById('loading');
+  area.style.display = 'none';
+  }
+
+
+await carregarProdutos();
