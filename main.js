@@ -29,6 +29,8 @@ function openModal() {
           <option value="Cameras de Seguranca">Câmeras de Segurança</option>
           <option value="interruptor inteligente">Interruptores Inteligentes</option>
           <option value="controle universal">Controles Universais</option>
+          <option value="outros">Outros Produtos/Serviços</option>
+
     </select>
         <textarea name="message" placeholder="Digite sua mensagem (Opcional)" style="width:100%; margin-bottom:10px;"></textarea>
         <input type="hidden" name="_captcha" value="false">
